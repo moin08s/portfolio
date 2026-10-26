@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moin Mulla | Systems Engineer & Applied Cryptography Specialist</title>
+  <meta name="description" content="Portfolio of Moin Sajit Mulla (moin08s) — Systems & Backend Engineer specializing in Zero-Dependency Go Architecture, Applied Cryptography (AES-GCM, Ed25519, Merkle Trees), Digital Forensics (DFIR), and Multimodal AI." />
+  <meta name="author" content="Moin Sajit Mulla" />
+  <link rel="canonical" href="https://github.com/moin08s" />
+
+  <!-- OpenGraph / Social Media Meta -->
+  <meta property="og:title" content="Moin Mulla | Systems Engineer & Applied Cryptography Specialist" />
+  <meta property="og:description" content="Zero-dependency Go architectures, verifiable cryptographic provenance engines, automated DFIR super-timelines, and AI safety platforms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/moin08s" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Moin Mulla | Systems Engineer & Applied Cryptography Specialist" />
+  <meta name="twitter:description" content="Zero-dependency Go architectures, verifiable cryptographic provenance engines, and AI safety platforms." />
+
+  <!-- Schema.org JSON-LD Structured Data for Recruiters & Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Moin Sajit Mulla",
+    "alternateName": "Moin Mulla",
+    "url": "https://github.com/moin08s",
+    "image": "assets/profile.jpg",
+    "sameAs": [
+      "https://github.com/moin08s",
+      "https://www.linkedin.com/in/moin-mulla-4ba680218/",
+      "https://moin08s.github.io/stdotp/"
+    ],
+    "jobTitle": "Systems & Backend Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Open Source Systems & Applied Cryptography"
+    },
+    "knowsAbout": [
+      "Zero-Dependency Go Architecture",
+      "Applied Cryptography",
+      "Digital Forensics & Incident Response",
+      "AES-256-GCM",
+      "Ed25519 Signatures",
+      "Merkle Trees",
+      "Model Context Protocol (MCP)",
+      "Flutter Mobile Systems"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0d121f',
+              surface: '#121929',
+              surfaceLight: '#17223b',
+              cyan: '#38bdf8',
+              emerald: '#10b981',
+              purple: '#a855f7',
+              amber: '#f59e0b',
+              rose: '#f43f5e'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css?v=2.9.0" />
+</head>
+<body class="bg-[#0d121f] text-slate-100 relative selection:bg-sky-500/30 selection:text-sky-300 antialiased" style="margin: 0; padding: 0;">
+
+  <!-- Atmospheric Background Layer (Completely Decoupled from Flow - Zero Layout Impact) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true" style="position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;">
+    <div class="absolute neon-glow-cyan" style="position: absolute; width: 650px; height: 650px; top: -140px; left: -140px;"></div>
+    <div class="absolute neon-glow-purple" style="position: absolute; width: 750px; height: 750px; top: 800px; right: -140px;"></div>
+    <div class="absolute neon-glow-emerald" style="position: absolute; width: 550px; height: 550px; top: 2200px; left: 30%;"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-40" style="position: absolute; inset: 0;"></div>
+  </div>
+
+  <div class="relative z-10 min-h-screen" style="margin: 0; padding: 0;">
+
+    <!-- ========================================== -->
+    <!-- HEADER / NAVIGATION                        -->
+    <!-- ========================================== -->
+    <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 backdrop-blur-md bg-[#0d121f]/95 border-b border-sky-500/15" style="top: 0; margin-top: 0;">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        
+        <!-- Brand / Identity -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-400 via-teal-300 to-emerald-400 p-[1.5px] shadow-lg shadow-sky-500/20 group-hover:shadow-sky-500/40 transition-all overflow-hidden flex-shrink-0">
+            <img 
+              src="assets/profile.jpg" 
+              onerror="this.onerror=null; this.src='profile.jpg';" 
+              alt="Moin Mulla" 
+              width="36" 
+              height="36" 
+              loading="eager" 
+              decoding="sync" 
+              class="w-full h-full object-cover rounded-[10px]" 
+            />
+          </div>
+          <div>
+            <div class="font-bold tracking-tight text-white flex items-center gap-2 text-sm sm:text-base">
+              <span>Moin Mulla</span>
+              <span class="status-dot"></span>
+            </div>
+            <div class="text-[11px] font-mono text-sky-400/90 leading-none">// Systems & Crypto Dev</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-mono">
+          <a href="#about" class="nav-link text-slate-300 hover:text-sky-400 transition-colors">// 01. About</a>
+          <a href="#projects" class="nav-link text-slate-300 hover:text-sky-400 transition-colors">// 02. Projects</a>
+          <a href="#experience" class="nav-link text-slate-300 hover:text-sky-400 transition-colors">// 03. Experience</a>
+          <a href="#live-lab" class="nav-link text-slate-300 hover:text-sky-400 transition-colors">// 04. Live Lab</a>
+          <a href="#notes" class="nav-link text-slate-300 hover:text-sky-400 transition-colors">// 05. Notes</a>
+          <a href="#contact" class="nav-link text-slate-300 hover:text-sky-400 transition-colors">// 06. Contact</a>
+        </nav>
+
+        <!-- Action Controls -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <!-- Downloadable Résumé CTA -->
+          <a href="assets/resume.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/35 hover:bg-emerald-500/25 transition-all shadow-sm">
+            <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Résumé</span>
+          </a>
+
+          <!-- Terminal Launcher CTA -->
+          <a href="#terminal-section" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-sky-500/10 text-sky-300 border border-sky-500/30 hover:bg-sky-500/20 transition-all">
+            <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            <span>CLI</span>
+          </a>
+
+          <!-- Socials -->
+          <a href="https://github.com/moin08s" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all" title="GitHub Profile">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/moin-mulla-4ba680218/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-300 hover:text-sky-400 hover:bg-slate-800/80 transition-all" title="LinkedIn Profile">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+
+          <!-- Mobile Menu Trigger -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white" aria-label="Open mobile menu">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-[#0d121f]/95 backdrop-blur-xl px-4 py-4 space-y-3 font-mono text-sm">
+        <a href="#about" class="mobile-nav-link block py-2 text-slate-200 hover:text-sky-400">// 01. About</a>
+        <a href="#projects" class="mobile-nav-link block py-2 text-slate-200 hover:text-sky-400">// 02. Projects</a>
+        <a href="#experience" class="mobile-nav-link block py-2 text-slate-200 hover:text-sky-400">// 03. Experience</a>
+        <a href="#live-lab" class="mobile-nav-link block py-2 text-slate-200 hover:text-sky-400">// 04. Live Lab</a>
+        <a href="#notes" class="mobile-nav-link block py-2 text-slate-200 hover:text-sky-400">// 05. Notes</a>
+        <a href="#contact" class="mobile-nav-link block py-2 text-slate-200 hover:text-sky-400">// 06. Contact</a>
+        <a href="assets/resume.html" target="_blank" class="mobile-nav-link block py-2 text-emerald-400 font-semibold">// 📄 View Résumé (PDF)</a>
+        <a href="#terminal-section" class="mobile-nav-link block py-2 text-sky-400 font-semibold">// Launch CLI Terminal</a>
+      </div>
+    </header>
+
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section id="hero" class="relative pt-2 pb-8 md:pt-4 md:pb-12 overflow-hidden" style="margin-top: 0;">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          
+          <!-- Left Column: Hero Pitch & Primary Identity -->
+          <div class="lg:col-span-7 space-y-5">
+            
+            <!-- Author Identity Header with Prominent Headshot -->
+            <div class="flex items-center gap-4 p-3.5 sm:p-4 rounded-2xl glass-panel border border-sky-500/30">
+              <div class="relative flex-shrink-0">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl p-[2px] bg-gradient-to-tr from-sky-400 via-teal-300 to-emerald-400 shadow-xl shadow-sky-500/25 overflow-hidden">
+                  <img 
+                    src="assets/profile.jpg" 
+                    onerror="this.onerror=null; this.src='profile.jpg';" 
+                    alt="Moin Mulla - Systems & Cryptography Engineer" 
+                    width="96" 
+                    height="96" 
+                    loading="eager" 
+                    decoding="sync" 
+                    class="w-full h-full object-cover rounded-[14px]" 
+                  />
+                </div>
+                <span class="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full bg-slate-900 border border-emerald-400 text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1 shadow-md">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Active
+                </span>
+              </div>
+              <div class="space-y-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30 font-semibold">@moin08s</span>
+                  <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-200 border border-sky-400/50 font-bold">🎓 Diploma Capstone (RIT)</span>
+                  <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-200 border border-amber-400/50 font-bold">🥉 3rd Prize · Aarambh '26 (WCE Sangli)</span>
+                  <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">⚙️ stdotp (Zero-Dep Go)</span>
+                  <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30 font-semibold">🏛️ SIH26057 Participant</span>
+                </div>
+                <div class="text-lg sm:text-xl font-extrabold text-white tracking-tight truncate">Moin Sajit Mulla</div>
+                <div class="text-xs font-mono text-sky-400/90 truncate">Computer Engineering Student | Software Developer</div>
+              </div>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              Engineering <span class="bg-gradient-to-r from-sky-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">Enterprise Software</span>, Desktop Systems & Zero-Dependency Code.
+            </h1>
+
+            <!-- Plain-English Recruiter & Hiring Manager Summary -->
+            <div class="recruiter-banner p-4 sm:p-5 rounded-2xl space-y-2">
+              <div class="flex items-center gap-2 text-sky-400 font-bold uppercase tracking-wider text-xs font-mono">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>Executive Summary for Technical Recruiters & Leads:</span>
+              </div>
+              <p class="text-sm text-slate-200 leading-relaxed">
+                I am a Computer Engineering student (B.Tech at D.Y. Patil, Diploma foundation from RIT) building <strong>enterprise desktop applications</strong>, <strong>zero-dependency utilities in pure Go</strong>, and <strong>applied AI/ML workflows</strong>. Proven track record delivering industry-sponsored solutions (<strong>HR SPHERE</strong> with Amrut Enterprises, published in <em>IJARSCT</em>), winning 3rd prize at <strong>Aarambh '26 Hackathon (WCE Sangli)</strong>, and tackling competitive challenges (<strong>Zero Dependency Hackathon</strong> & <strong>SIH26057 MoES</strong>).
+              </p>
+            </div>
+
+            <!-- Narrative Subtitle -->
+            <p class="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
+              Hi, I'm <strong class="text-white">Moin Sajit Mulla</strong> (<code class="text-sky-300 font-mono bg-slate-800/90 px-1.5 py-0.5 rounded border border-slate-700">moin08s</code>). Focused on solid software engineering principles (V-Model), dependable database architectures, and supply-chain-immune software.
+            </p>
+
+            <!-- Metrics Highlight Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-0.5">
+              <div class="glass-panel p-3 rounded-xl border border-sky-500/25 text-center sm:text-left">
+                <div class="text-2xl sm:text-3xl font-mono font-extrabold text-sky-400">13</div>
+                <div class="text-xs text-slate-300 font-mono mt-0.5 font-medium">Public GitHub Repos</div>
+              </div>
+              <div class="glass-panel p-3 rounded-xl border border-emerald-500/25 text-center sm:text-left">
+                <div class="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400">0</div>
+                <div class="text-xs text-slate-300 font-mono mt-0.5 font-medium">Runtime Deps (stdotp)</div>
+              </div>
+              <div class="glass-panel p-3 rounded-xl border border-amber-500/25 text-center sm:text-left">
+                <div class="text-2xl sm:text-3xl font-mono font-extrabold text-amber-400">🥉 3rd</div>
+                <div class="text-xs text-slate-300 font-mono mt-0.5 font-medium">Aarambh '26 WCE</div>
+              </div>
+              <div class="glass-panel p-3 rounded-xl border border-purple-500/25 text-center sm:text-left">
+                <div class="text-xl sm:text-2xl font-mono font-extrabold text-purple-400">IJARSCT</div>
+                <div class="text-xs text-slate-300 font-mono mt-0.5 font-medium">Published Research</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="#projects" class="btn-shimmer inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-teal-500 text-slate-950 font-bold hover:brightness-110 shadow-lg shadow-sky-500/25 transition-all text-sm">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                <span>Explore Flagship Projects</span>
+              </a>
+              <a href="assets/resume.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-panel text-white font-mono text-sm hover:text-emerald-300 hover:border-emerald-500/50 transition-all">
+                <svg class="w-4 h-4 fill-none stroke-current text-emerald-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>Download Résumé (PDF)</span>
+              </a>
+              <a href="https://www.linkedin.com/in/moin-mulla-4ba680218/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl glass-panel text-slate-200 hover:text-sky-300 hover:border-sky-500/40 transition-all font-mono text-sm" title="Connect on LinkedIn">
+                <svg class="w-4 h-4 fill-current text-[#0077B5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>Connect / Message</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Profile & Systems Architecture Console -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <!-- Featured Developer Profile Card -->
+            <div class="glass-panel p-5 rounded-2xl border border-sky-500/35 shadow-2xl relative">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs font-mono">
+                <span class="text-slate-400">// Verified Developer Credentials</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold">● Available for Hire</span>
+              </div>
+              
+              <div class="flex items-center gap-4 pt-4">
+                <div class="relative flex-shrink-0">
+                  <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-[2.5px] bg-gradient-to-tr from-sky-400 via-teal-300 to-emerald-400 shadow-xl shadow-sky-500/30 overflow-hidden">
+                    <img 
+                      src="assets/profile.jpg" 
+                      onerror="this.onerror=null; this.src='profile.jpg';" 
+                      alt="Moin Mulla Profile Portrait" 
+                      width="112" 
+                      height="112" 
+                      loading="eager" 
+                      decoding="sync" 
+                      class="w-full h-full object-cover rounded-[13px]" 
+                    />
+                  </div>
+                  <span class="absolute -bottom-1.5 -right-1.5 px-2 py-0.5 rounded-md bg-slate-950 border border-emerald-500/60 text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1 shadow-lg">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Verified
+                  </span>
+                </div>
+                
+                <div class="space-y-1.5 min-w-0">
+                  <div class="font-extrabold text-white text-lg tracking-tight">Moin Sajit Mulla</div>
+                  <div class="text-xs font-mono text-sky-300 font-semibold">Systems & Cryptography Engineer</div>
+                  <p class="text-xs text-slate-300 leading-snug">
+                    Zero-dependency Go architectures, verifiable video signing (Merkle GOP), and DFIR super-timelines.
+                  </p>
+                  <div class="flex items-center gap-2 pt-1 text-xs font-mono">
+                    <a href="https://github.com/moin08s" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5 transition-all">
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                      <span>github</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/moin-mulla-4ba680218/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-500/35 flex items-center gap-1.5 transition-all">
+                      <svg class="w-3.5 h-3.5 fill-current text-[#0077B5]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Code Architecture Window -->
+            <div class="glass-panel rounded-2xl border border-sky-500/30 overflow-hidden shadow-2xl relative">
+              
+              <!-- Window Title Bar -->
+              <div class="px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
+                  <span class="text-xs font-mono text-slate-300 ml-2 font-semibold">stdotp/crypto_vault.go (Go 1.27)</span>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">AES-256-GCM + AAD</span>
+              </div>
+
+              <!-- Code Content Display -->
+              <div class="p-4 font-mono text-xs text-slate-200 leading-relaxed overflow-x-auto space-y-1 bg-[#090d16]/95">
+                <div class="text-slate-400">// Zero-Dependency Key Derivation per RFC 2898 & OWASP 2026</div>
+                <div><span class="code-token-keyword">func</span> <span class="code-token-func">DeriveKey</span>(pass, salt []<span class="code-token-type">byte</span>, iters <span class="code-token-type">int</span>) []<span class="code-token-type">byte</span> {</div>
+                <div class="pl-4 text-slate-300">prf := hmac.<span class="code-token-func">New</span>(sha256.New, pass)</div>
+                <div class="pl-4 text-slate-300">dk := <span class="code-token-func">make</span>([]<span class="code-token-type">byte</span>, 32) <span class="text-slate-400">// AES-256 Key Material</span></div>
+                <div class="pl-4"><span class="code-token-keyword">for</span> i := 0; i &lt; iters; i++ {</div>
+                <div class="pl-8 text-slate-300">prf.<span class="code-token-func">Reset</span>(); prf.<span class="code-token-func">Write</span>(uBuf) <span class="text-slate-400">// Zero-alloc loop</span></div>
+                <div class="pl-4">}</div>
+                <div class="pl-4"><span class="code-token-keyword">return</span> dk</div>
+                <div>}</div>
+                <div class="pt-1.5 text-slate-400">// Authenticated Vault Sealing with Nonce Freshness</div>
+                <div><span class="code-token-keyword">func</span> <span class="code-token-func">SealVault</span>(key, payload, aad []<span class="code-token-type">byte</span>) (*Envelope, <span class="code-token-type">error</span>) {</div>
+                <div class="pl-4 text-slate-300">aead, _ := cipher.<span class="code-token-func">NewGCM</span>(block)</div>
+                <div class="pl-4 text-emerald-400 font-semibold">ciphertext := aead.<span class="code-token-func">Seal</span>(nil, nonce, payload, aad)</div>
+                <div class="pl-4"><span class="code-token-keyword">return</span> &Envelope{Nonce: nonce, Data: ciphertext}, nil</div>
+                <div>}</div>
+              </div>
+
+              <!-- Card Footer Status -->
+              <div class="px-4 py-2 bg-slate-900/80 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-300">
+                <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                  <span>Zero Network Calls · Air-Gapped Clean</span>
+                </span>
+                <span class="text-sky-300 font-semibold">GOPROXY=off</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE TERMINAL SECTION               -->
+    <!-- ========================================== -->
+    <section id="terminal-section" class="py-8 sm:py-10 section-lift">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <div class="text-xs font-mono text-sky-400 uppercase tracking-wider mb-1">// Interactive CLI Emulator</div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Live In-Browser Workstation</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Simulate real CLI tools including stdotp, WASP forensics, and Anchor provenance.</p>
+          </div>
+          
+          <!-- Quick Run Chips (Desktop & Mobile) -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-mono text-slate-400 mr-1 hidden sm:inline">Quick Run:</span>
+            <button class="cli-quick-chip font-bold text-emerald-400 border-emerald-500/40" data-cmd="demo">⚡ demo</button>
+            <button class="cli-quick-chip" data-cmd="stdotp self-test">stdotp self-test</button>
+            <button class="cli-quick-chip" data-cmd="hr-sphere">hr-sphere</button>
+            <button class="cli-quick-chip" data-cmd="transitpro">transitpro</button>
+            <button class="cli-quick-chip" data-cmd="marineguard">marineguard</button>
+            <button class="cli-quick-chip" data-cmd="projects">projects</button>
+            <button class="cli-quick-chip" data-cmd="whoami">whoami</button>
+          </div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div id="interactive-terminal" class="glass-panel scanline rounded-2xl border border-sky-500/35 overflow-hidden shadow-2xl max-h-[460px] flex flex-col bg-[#070a10]">
+          
+          <!-- Terminal Header -->
+          <div class="px-4 py-3 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between select-none">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+              <span class="text-xs font-mono text-slate-300 font-semibold ml-2">moin@workstation: ~/portfolio (bash)</span>
+            </div>
+            <div class="text-xs font-mono text-slate-400 flex items-center gap-2">
+              <span class="hidden sm:inline">UTF-8</span>
+              <span class="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-semibold">Active</span>
+            </div>
+          </div>
+
+          <!-- Terminal Content Output -->
+          <div id="terminal-output" class="p-5 overflow-y-auto space-y-2 flex-grow min-h-[260px]"></div>
+
+          <!-- Mobile Quick Action Command Row (Immediate Touch Access) -->
+          <div class="px-3 py-2 bg-slate-950/90 border-t border-slate-800/80 flex items-center gap-1.5 overflow-x-auto text-xs font-mono">
+            <span class="text-slate-500 text-[10px] uppercase font-bold shrink-0">Tap Run:</span>
+            <button type="button" class="cli-quick-chip text-[11px] py-1 px-2 shrink-0 font-bold text-emerald-400" data-cmd="demo">demo</button>
+            <button type="button" class="cli-quick-chip text-[11px] py-1 px-2 shrink-0" data-cmd="stdotp self-test">stdotp</button>
+            <button type="button" class="cli-quick-chip text-[11px] py-1 px-2 shrink-0" data-cmd="hr-sphere">hr-sphere</button>
+            <button type="button" class="cli-quick-chip text-[11px] py-1 px-2 shrink-0" data-cmd="transitpro">transitpro</button>
+            <button type="button" class="cli-quick-chip text-[11px] py-1 px-2 shrink-0" data-cmd="projects">projects</button>
+            <button type="button" class="cli-quick-chip text-[11px] py-1 px-2 shrink-0" data-cmd="clear">clear</button>
+          </div>
+
+          <!-- Command Input Row -->
+          <form id="terminal-form" action="javascript:void(0);" onsubmit="return false;" class="p-3 bg-slate-900/95 border-t border-slate-800 flex items-center gap-2 font-mono text-sm">
+            <span class="text-emerald-400 font-bold hidden sm:inline">moin@workstation</span>
+            <span class="text-slate-400 hidden sm:inline">:</span>
+            <span class="text-sky-400 font-bold hidden sm:inline">~</span>
+            <span class="text-slate-400 font-bold">$</span>
+            <input 
+              type="text" 
+              id="terminal-input" 
+              autocomplete="off" 
+              autocapitalize="none"
+              autocorrect="off"
+              spellcheck="false" 
+              placeholder="Type 'help', 'demo', or 'projects'..." 
+              class="flex-grow bg-transparent text-slate-100 focus:outline-none placeholder:text-slate-500 text-base sm:text-sm font-mono"
+            />
+            <button type="submit" id="terminal-run-btn" class="px-3.5 py-1.5 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 text-xs font-mono font-semibold border border-sky-500/30 transition-all cursor-pointer">
+              Run
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- FEATURED PROJECTS SHOWCASE                 -->
+    <!-- ========================================== -->
+    <section id="projects" class="py-10 sm:py-14 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+          <div>
+            <div class="text-xs font-mono text-sky-400 uppercase tracking-wider mb-2 font-bold">// Featured Engineering Portfolio</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Proven Code & Systems Architecture</h2>
+            <p class="text-slate-300 mt-2 max-w-2xl leading-relaxed text-sm sm:text-base">
+              Each project solves a critical technical problem — from air-gapped zero-dependency cryptography to automated DFIR super-timelines and deepfake-resistant video signing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sticky Project Filter Bar -->
+        <div class="sticky-filter-wrapper mb-12">
+          <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-xl bg-slate-900/90 border border-slate-800 shadow-md">
+            <span class="text-xs font-mono text-slate-400 px-2 hidden sm:inline">Filter:</span>
+            <button data-filter="all" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono bg-sky-500 text-slate-900 font-semibold shadow-lg shadow-sky-500/20 transition-all">All (6)</button>
+            <button data-filter="desktop" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono text-slate-300 hover:bg-slate-800 transition-all">Desktop & Enterprise (2)</button>
+            <button data-filter="crypto" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono text-slate-300 hover:bg-slate-800 transition-all">Crypto & Security (2)</button>
+            <button data-filter="ai" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono text-slate-300 hover:bg-slate-800 transition-all">AI & Infrastructure (2)</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1: HR SPHERE (Diploma Capstone Project) -->
+          <div class="project-card glass-panel rounded-2xl border border-sky-500/35 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300" data-category="desktop">
+            <div class="p-6 flex flex-col flex-grow">
+              
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/15 text-sky-300 border border-sky-500/35 font-bold">
+                  🎓 Diploma Capstone Project (RIT)
+                </span>
+                <span class="text-xs font-mono text-slate-300 font-semibold">C#.NET & MS SQL</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-2">
+                <span>HR SPHERE</span>
+                <svg class="w-4 h-4 fill-none stroke-current text-sky-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </h3>
+
+              <!-- Impact Statement First -->
+              <p class="text-sky-300 font-medium text-xs sm:text-sm mt-2 leading-relaxed bg-sky-500/10 p-2.5 rounded-lg border border-sky-500/25">
+                Enterprise Employee Management & Payroll desktop platform developed with Amrut Enterprises following V-Model methodology. Research paper published in <em>IJARSCT</em>.
+              </p>
+
+              <!-- Technical Highlights -->
+              <div class="my-4 space-y-1.5 text-xs text-slate-200 font-mono">
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>C#.NET Desktop App in Visual Studio 2022</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Normalized MS SQL Server 2022 relational schemas</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Attendance tracking, payroll & performance evaluation</span>
+                </div>
+              </div>
+
+              <!-- Quantified Metrics Row -->
+              <div class="grid grid-cols-3 gap-2 my-2 py-2 border-y border-slate-800 text-center font-mono">
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Methodology</div>
+                  <div class="text-xs font-bold text-emerald-400">V-Model SDLC</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Publication</div>
+                  <div class="text-xs font-bold text-sky-400">IJARSCT '24</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Database</div>
+                  <div class="text-xs font-bold text-amber-400">MS SQL 2022</div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-sky-300">C#.NET</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300">MS SQL 2022</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-purple-300">Visual Studio</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-amber-300">V-Model</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800/80 gap-2">
+                <button data-project="hr-sphere" class="open-modal-btn px-3 py-2 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-xs font-mono font-semibold text-sky-300 flex items-center gap-1.5 transition-all">
+                  <span>Deep Dive</span>
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="window.runTerminalCommand('hr-sphere')" class="px-3 py-2 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all" title="Launch Interactive CLI Demo">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    <span>Live Demo</span>
+                  </button>
+                  <a href="https://github.com/moin08s/HR_SPHERE" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-all" title="View Source on GitHub">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 2: stdotp -->
+          <div class="project-card glass-panel rounded-2xl border border-sky-500/35 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300" data-category="crypto">
+            <div class="p-6 flex flex-col flex-grow">
+              
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/10 text-sky-300 border border-sky-500/30 font-bold">
+                  Zero Dependency Hackathon '26 Entry
+                </span>
+                <span class="text-xs font-mono text-slate-300 font-semibold">Go 1.27 Pure</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-2">
+                <span>stdotp</span>
+                <svg class="w-4 h-4 fill-none stroke-current text-sky-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </h3>
+
+              <!-- Impact Statement First -->
+              <p class="text-sky-300 font-medium text-xs sm:text-sm mt-2 leading-relaxed bg-sky-500/10 p-2.5 rounded-lg border border-sky-500/25">
+                Zero-dependency 2FA authenticator that eliminated 15 third-party packages using pure Go stdlib. 56 RFC-compliant tests. Air-gapped reproducible builds.
+              </p>
+
+              <!-- Technical Highlights -->
+              <div class="my-4 space-y-1.5 text-xs text-slate-200 font-mono">
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>AES-256-GCM + AAD metadata binding</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>PBKDF2-HMAC-SHA256 (600,000 iters)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>56 passing RFC 4226 & 6238 test suites</span>
+                </div>
+              </div>
+
+              <!-- Quantified Metrics Row -->
+              <div class="grid grid-cols-3 gap-2 my-2 py-2 border-y border-slate-800 text-center font-mono">
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">External Deps</div>
+                  <div class="text-xs font-bold text-emerald-400">0 Packages</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Test Vectors</div>
+                  <div class="text-xs font-bold text-sky-400">56 / 56 Pass</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Derivation</div>
+                  <div class="text-xs font-bold text-amber-400">&lt; 0.2ms</div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-sky-300">Go 1.27 Pure</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300">AES-256-GCM</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-purple-300">PBKDF2</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-amber-300">RFC 6238</span>
+              </div>
+
+              <!-- Action Links (Prominent & Clear) -->
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800/80 gap-2">
+                <button data-project="stdotp" class="open-modal-btn px-3 py-2 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-xs font-mono font-semibold text-sky-300 flex items-center gap-1.5 transition-all">
+                  <span>Deep Dive</span>
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                  <a href="https://moin08s.github.io/stdotp/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all" title="Play Live Browser Demo">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    <span>Live Demo</span>
+                  </a>
+                  <a href="https://github.com/moin08s/stdotp" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-all" title="View Source on GitHub">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 3: TransitPro (Bus Management System) -->
+          <div class="project-card glass-panel rounded-2xl border border-sky-500/35 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300" data-category="desktop">
+            <div class="p-6 flex flex-col flex-grow">
+              
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-purple-500/15 text-purple-300 border border-purple-500/35 font-bold">
+                  🚌 Enterprise Desktop Platform
+                </span>
+                <span class="text-xs font-mono text-slate-300 font-semibold">Java Swing & SQLite</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors flex items-center gap-2">
+                <span>TransitPro</span>
+                <svg class="w-4 h-4 fill-none stroke-current text-purple-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg>
+              </h3>
+
+              <!-- Impact Statement First -->
+              <p class="text-purple-300 font-medium text-xs sm:text-sm mt-2 leading-relaxed bg-purple-500/10 p-2.5 rounded-lg border border-purple-500/25">
+                Bus travel management and ticketing system featuring clean 3-layer architecture (UI, Service, DAO), role-based auth, and real-time seat locking.
+              </p>
+
+              <!-- Highlights -->
+              <div class="my-4 space-y-1.5 text-xs text-slate-200 font-mono">
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>3-Layer Architecture: UI, Service, and Data Access (DAO)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Interactive visual seat mapping with SQLite concurrency locking</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Role-based access control with SHA-256 credential hashing</span>
+                </div>
+              </div>
+
+              <!-- Quantified Metrics Row -->
+              <div class="grid grid-cols-3 gap-2 my-2 py-2 border-y border-slate-800 text-center font-mono">
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Architecture</div>
+                  <div class="text-xs font-bold text-purple-400">3-Tier DAO</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Database</div>
+                  <div class="text-xs font-bold text-emerald-400">SQLite Embedded</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Security</div>
+                  <div class="text-xs font-bold text-sky-400">SHA-256 Auth</div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-purple-300">Java (Swing)</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-sky-300">SQLite</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300">DAO Pattern</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-pink-300">JDK 8+</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800/80 gap-2">
+                <button data-project="transitpro" class="open-modal-btn px-3 py-2 rounded-lg bg-purple-500/15 hover:bg-purple-500/25 text-xs font-mono font-semibold text-purple-300 flex items-center gap-1.5 transition-all">
+                  <span>Deep Dive</span>
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="window.runTerminalCommand('transitpro')" class="px-3 py-2 rounded-lg bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all" title="Launch Interactive CLI Demo">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    <span>Live Demo</span>
+                  </button>
+                  <a href="https://github.com/moin08s/Bus_Management_System" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-all" title="View Source on GitHub">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 4: MarineGuard MCP -->
+          <div class="project-card glass-panel rounded-2xl border border-sky-500/25 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300" data-category="ai">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/30 font-bold">
+                  🏛️ SIH26057 · MoES
+                </span>
+                <span class="text-xs font-mono text-slate-300 font-semibold">Python & MCP</span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-2">
+                <span>MarineGuard MCP</span>
+                <svg class="w-4 h-4 fill-none stroke-current text-sky-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              </h3>
+              
+              <!-- Impact Statement First -->
+              <p class="text-sky-300 font-medium text-xs sm:text-sm mt-2 leading-relaxed bg-sky-500/10 p-2.5 rounded-lg border border-sky-500/25">
+                Autonomous agent protocol and sonar AI system built for the Ministry of Earth Sciences (SIH26057) to detect underwater marine debris in real time.
+              </p>
+
+              <div class="my-4 space-y-1.5 text-xs text-slate-200 font-mono">
+                <div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Side-scan sonar debris & anomaly segmentation</span></div>
+                <div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Anthropic Model Context Protocol (MCP) server</span></div>
+                <div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Streamlit telemetry & automated agent dispatch</span></div>
+              </div>
+
+              <!-- Quantified Metrics Row -->
+              <div class="grid grid-cols-3 gap-2 my-2 py-2 border-y border-slate-800 text-center font-mono">
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Detection</div>
+                  <div class="text-xs font-bold text-emerald-400">Sonar AI</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Protocol</div>
+                  <div class="text-xs font-bold text-sky-400">MCP Spec</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Ministry</div>
+                  <div class="text-xs font-bold text-amber-400">MoES Govt</div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-sky-300">MCP Protocol</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-purple-300">MoES / SIH</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300">Sonar AI</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-amber-300">Streamlit</span>
+              </div>
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800/80 gap-2">
+                <button data-project="marineguard" class="open-modal-btn px-3 py-2 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-xs font-mono font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5 transition-all">
+                  <span>Deep Dive</span><svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="window.runTerminalCommand('marineguard')" class="px-3 py-2 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all" title="Launch Sonar Telemetry Demo">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    <span>Live Demo</span>
+                  </button>
+                  <a href="https://github.com/moin08s/marineguard-mcp" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-all" title="GitHub Repo"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Drishyamitra -->
+          <div class="project-card glass-panel rounded-2xl border border-emerald-500/35 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300" data-category="ai">
+            <div class="p-6 flex flex-col flex-grow">
+              
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold">
+                  🌉 Smart Infrastructure Project
+                </span>
+                <span class="text-xs font-mono text-slate-300 font-semibold">JavaScript & Node</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-2">
+                <span>Drishyamitra</span>
+                <svg class="w-4 h-4 fill-none stroke-current text-emerald-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </h3>
+
+              <!-- Impact Statement First -->
+              <p class="text-emerald-300 font-medium text-xs sm:text-sm mt-2 leading-relaxed bg-emerald-500/10 p-2.5 rounded-lg border border-emerald-500/25">
+                Full-stack Smart Bridge solution combining automated sensor telemetry, vision monitoring, and real-time emergency hazard notifications.
+              </p>
+
+              <!-- Highlights -->
+              <div class="my-4 space-y-1.5 text-xs text-slate-200 font-mono">
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Automated structural integrity telemetry ingestion</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Integrated vision-assisted anomaly tracking</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Real-time hazard notifications and telemetry dashboard</span>
+                </div>
+              </div>
+
+              <!-- Quantified Metrics Row -->
+              <div class="grid grid-cols-3 gap-2 my-2 py-2 border-y border-slate-800 text-center font-mono">
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Domain</div>
+                  <div class="text-xs font-bold text-emerald-400">Smart Bridge</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Architecture</div>
+                  <div class="text-xs font-bold text-sky-400">Full-Stack</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Frontend</div>
+                  <div class="text-xs font-bold text-purple-400">Vite / JS</div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-sky-300">JavaScript</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300">Node.js</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-amber-300">Vite</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-purple-300">Smart Bridge</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800/80 gap-2">
+                <button data-project="drishyamitra" class="open-modal-btn px-3 py-2 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 text-xs font-mono font-semibold text-emerald-300 flex items-center gap-1.5 transition-all">
+                  <span>Deep Dive</span>
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="window.runTerminalCommand('drishyamitra')" class="px-3 py-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all" title="Launch Bridge Telemetry Demo">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    <span>Live Demo</span>
+                  </button>
+                  <a href="https://github.com/moin08s/Drishyamitra" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-all" title="View Source on GitHub">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 6: WASP Platform -->
+          <div class="project-card glass-panel rounded-2xl border border-sky-500/35 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300" data-category="crypto">
+            <div class="p-6 flex flex-col flex-grow">
+              
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/30 font-bold">
+                  🛡️ Digital Forensics & IR
+                </span>
+                <span class="text-xs font-mono text-slate-300 font-semibold">Python 3.11+</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-2">
+                <span>WASP Platform</span>
+                <svg class="w-4 h-4 fill-none stroke-current text-sky-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </h3>
+
+              <!-- Impact Statement First -->
+              <p class="text-sky-300 font-medium text-xs sm:text-sm mt-2 leading-relaxed bg-sky-500/10 p-2.5 rounded-lg border border-sky-500/25">
+                Automated digital forensics platform parsing operating system artifacts to reconstruct attacker attack-chains with 29 passing CI test suites.
+              </p>
+
+              <!-- Technical Highlights -->
+              <div class="my-4 space-y-1.5 text-xs text-slate-200 font-mono">
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Automated forensic timeline correlation</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>29 automated test suites passing (pytest)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current text-emerald-400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Chronological super-timeline normalization</span>
+                </div>
+              </div>
+
+              <!-- Quantified Metrics Row -->
+              <div class="grid grid-cols-3 gap-2 my-2 py-2 border-y border-slate-800 text-center font-mono">
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Unit Tests</div>
+                  <div class="text-xs font-bold text-emerald-400">29 Passing</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">Language</div>
+                  <div class="text-xs font-bold text-sky-400">Python 3.11</div>
+                </div>
+                <div class="p-1 rounded bg-slate-900/80">
+                  <div class="text-[10px] text-slate-400 uppercase">License</div>
+                  <div class="text-xs font-bold text-purple-400">MIT Open</div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-sky-300">Python 3.11</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-purple-300">DFIR</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300">Super-Timeline</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-amber-300">pytest</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800/80 gap-2">
+                <button data-project="wasp" class="open-modal-btn px-3 py-2 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-xs font-mono font-semibold text-sky-300 flex items-center gap-1.5 transition-all">
+                  <span>Deep Dive</span>
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="window.runTerminalCommand('wasp')" class="px-3 py-2 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all" title="Launch Forensics Demo">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    <span>Live Demo</span>
+                  </button>
+                  <a href="https://github.com/moin08s/WASP" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-all" title="View Source on GitHub">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- EXPERIENCE & RECOGNITION TIMELINE         -->
+    <!-- ========================================== -->
+    <section id="experience" class="py-10 sm:py-14 section-alt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <div class="text-xs font-mono text-purple-400 uppercase tracking-wider mb-2 font-bold">// Experience & Milestones</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Track Record & Recognition</h2>
+          <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
+            Hands-on systems engineering, nationwide competitive hackathons, and rigorous open-source architectural contributions.
+          </p>
+        </div>
+
+        <div class="relative border-l-2 border-sky-500/30 ml-4 sm:ml-6 pl-6 sm:pl-8 space-y-10">
+          
+          <!-- Milestone 1: Aarambh '26 Hackathon (WCE Sangli) - 3rd Prize Win -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot" style="background: #f59e0b;"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-amber-500/30 hover:border-amber-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-200 border border-amber-400/50 font-bold">
+                  🥉 3rd Prize Winner · Hackathon
+                </span>
+                <span class="text-xs font-mono text-slate-400">Walchand College of Engineering (WCE), Sangli</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Won 3rd Prize at Aarambh '26 Hackathon</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Secured 3rd place in state-level competitive hackathon conducted by Walchand College of Engineering (WCE), Sangli. Recognized for rapid system prototyping, robust architectural execution, and resilient software design under competitive pressure.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-amber-300">
+                <span>WCE Sangli</span> · <span>Aarambh '26</span> · <span>3rd Prize Winner</span> · <span>Rapid Prototyping</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: Zero Dependency Hackathon 2026 Submission -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-sky-500/30 hover:border-sky-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30 font-bold">
+                  ⚙️ Hackathon Submission · Track E (Security & Crypto Utilities)
+                </span>
+                <span class="text-xs font-mono text-slate-400">Zero Dependency Hackathon 2026</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Engineered stdotp — Zero-Dependency Go Authenticator</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Engineered a supply-chain-immune CLI 2FA authenticator and encrypted vault replacing 15 popular third-party Go packages strictly using the Go 1.27 standard library. Tested against official RFC 4226 and RFC 6238 test vectors with 56 passing test suites.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-sky-300">
+                <span>Go 1.27</span> · <span>AES-256-GCM</span> · <span>Zero-Alloc PBKDF2</span> · <span>Lockfile Integrity</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: SIH26057 Participant -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot" style="background: #a855f7;"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/30 font-bold">
+                  🏛️ Smart India Hackathon (SIH26057) Participant
+                </span>
+                <span class="text-xs font-mono text-slate-400">Ministry of Earth Sciences (MoES)</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Engineered MarineGuard MCP — Sonar Debris & Anomaly System</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Designed an autonomous agent protocol and computer vision model detecting underwater debris from acoustic side-scan sonar feeds. Exposed as an Anthropic Model Context Protocol (MCP) server for automated agent ingestion and real-time emergency dispatches.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-purple-300">
+                <span>Model Context Protocol (MCP)</span> · <span>Sonar AI</span> · <span>Python</span> · <span>Streamlit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 4: Industrial Training & Internship at Domain Computer -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot" style="background: #38bdf8;"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-sky-500/30 hover:border-sky-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30 font-bold">
+                  💼 Industrial Training & Internship
+                </span>
+                <span class="text-xs font-mono text-slate-400">Jun 2023 – Jul 2023 · Sangli, India (On-site)</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Python Programming & Artificial Intelligence — Domain Computer</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Completed on-site industrial training in Python programming and Artificial Intelligence at <strong>Domain Computer Education, Sangli</strong> during Diploma in Computer Engineering at RIT. Developed algorithmic problem-solving routines, automation scripts, and foundational AI workflows. Awarded official Certificate of Achievement.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-sky-300">
+                <span>Domain Computer</span> · <span>Sangli, Maharashtra</span> · <span>Python</span> · <span>Artificial Intelligence</span> · <span>On-site</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 5: Diploma Capstone Project - HR SPHERE -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot" style="background: #0ea5e9;"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-sky-500/30 hover:border-sky-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/35 font-bold">
+                  🎓 Diploma Capstone Project & Industry Collaboration
+                </span>
+                <span class="text-xs font-mono text-slate-400">Jul 2023 – May 2024 · Islampur, Sangli</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">HR SPHERE — Diploma Capstone Project (Amrut Enterprises & RIT)</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Engineered an enterprise employee management and automated payroll platform in C#.NET and MS SQL Server 2022 as the official Diploma Capstone Project at Rajarambapu Institute of Technology (RIT), sponsored by Amrut Enterprises. Guided by Mr. Patil D.B. using the V-Model methodology. Co-authored research paper published in <em>IJARSCT</em> (April 2024).
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-sky-300">
+                <span>Diploma Capstone</span> · <span>Amrut Enterprises</span> · <span>C# (.NET)</span> · <span>MS SQL Server 2022</span> · <span>V-Model</span> · <span>RIT Sangli</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 6: Higher Education (B.Tech) -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot" style="background: #10b981;"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-emerald-500/30 hover:border-emerald-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-bold">
+                  🎓 Higher Education (Ongoing)
+                </span>
+                <span class="text-xs font-mono text-slate-400">D.Y. Patil Kolhapur</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">B.Tech — Computer Science & Engineering</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                D.Y. Patil School of Engineering and Management, Kolhapur (Lateral Entry after Diploma in Computer Engineering). Focus on high-assurance systems, applied cryptography, and advanced distributed architectures.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-emerald-300">
+                <span>Distributed Systems</span> · <span>Advanced DSA</span> · <span>Computer Science</span> · <span>Kolhapur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 7: Foundational Diploma -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot" style="background: #06b6d4;"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-cyan-500/30 hover:border-cyan-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-bold">
+                  📜 Diploma in Computer Engineering (2021 – 2024)
+                </span>
+                <span class="text-xs font-mono text-slate-400">RIT Rajaramnagar</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Diploma in Computer Engineering</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Rajarambapu Institute of Technology (RIT), Rajaramnagar, Sangli. Strong technical grounding in Data Structures & Algorithms, Object-Oriented Programming (Java, C++), Relational Database Management Systems, and Software Engineering (V-Model). <strong>Capstone Project: HR SPHERE</strong>.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-cyan-300">
+                <span>Data Structures</span> · <span>Relational Databases</span> · <span>Java / C++</span> · <span>Capstone: HR SPHERE</span> · <span>RIT Sangli</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 6: ISRO IIRS Certification -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 timeline-dot" style="background: #f59e0b;"></div>
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-amber-500/30 hover:border-amber-500/60 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 font-bold">
+                  🛰️ Government Certification
+                </span>
+                <span class="text-xs font-mono text-slate-400">ISRO IIRS • March 2025</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Geodata Processing using Python & Machine Learning</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Indian Institute of Remote Sensing (IIRS), Indian Space Research Organisation (ISRO). Completed national technical training in geospatial data manipulation, Python numerical libraries, and satellite imagery machine learning models (Credential ID: 2025234604584).
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-slate-800 text-xs font-mono text-amber-300">
+                <span>ISRO IIRS</span> · <span>Python Geospatial</span> · <span>Machine Learning</span> · <span>Credential ID: 2025234604584</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- LIVE CRYPTO & SYSTEMS LAB                  -->
+    <!-- ========================================== -->
+    <section id="live-lab" class="py-10 sm:py-14 section-lift">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-sky-500/10 text-sky-400 border border-sky-500/30 mb-3 font-semibold">
+            <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 3h6l3 8a9 9 0 1 1-12 0Z"/><line x1="6" y1="11" x2="18" y2="11"/></svg>
+            <span>Interactive Systems Playground</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Live Cryptography Lab</h2>
+          <p class="text-slate-300 mt-3 text-sm sm:text-base leading-relaxed">
+            Interact with live in-browser simulations of RFC 6238 Time-based One-Time Passwords and SHA-256 Merkle Tree tamper detection.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- Widget 1: Live RFC 6238 TOTP Simulator -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-sky-500/30 relative">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <svg class="w-5 h-5 fill-none stroke-current text-sky-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>
+                <h3 class="font-bold text-white text-lg">RFC 6238 TOTP Engine (stdotp)</h3>
+              </div>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-semibold">Live HMAC-SHA1</span>
+            </div>
+
+            <div class="mt-6 space-y-6">
+              
+              <!-- Service Selection -->
+              <div>
+                <label for="totp-service-select" class="block text-xs font-mono text-slate-300 mb-2">Select Authenticator Profile:</label>
+                <select id="totp-service-select" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm font-mono text-slate-200 focus:outline-none focus:border-sky-400">
+                  <option value="github">GitHub — (Secret: JBSWY3DPEHPK3PXP)</option>
+                  <option value="aws">AWS Production — (Secret: KVKFKRCPNZQUYMLX)</option>
+                  <option value="cloudflare">Cloudflare Vault — (Secret: NBSWY3DPEHPK3PXP)</option>
+                </select>
+              </div>
+
+              <!-- Main Live OTP Display -->
+              <div class="p-6 rounded-2xl bg-slate-950/90 border border-sky-500/25 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-mono text-slate-400 mb-1">Current 6-Digit Token:</div>
+                  <div id="live-totp-code" class="text-3xl sm:text-4xl font-mono font-extrabold tracking-widest text-sky-400">
+                    --- ---
+                  </div>
+                </div>
+
+                <!-- Animated Countdown Ring -->
+                <div class="relative flex items-center justify-center">
+                  <svg class="w-14 h-14">
+                    <circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="3.5" class="text-slate-800" fill="transparent" />
+                    <circle id="totp-progress-ring" cx="28" cy="28" r="18" stroke-width="3.5" class="stroke-sky-400 progress-ring-circle" fill="transparent" />
+                  </svg>
+                  <span id="totp-timer-text" class="absolute text-xs font-mono font-bold text-sky-300">30s</span>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <div class="flex items-center justify-between text-xs font-mono">
+                <button id="totp-copy-btn" class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-sky-500/20 text-sky-300 hover:bg-sky-500/30 border border-sky-500/30 transition-all font-semibold">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Token</span>
+                </button>
+                <a href="https://moin08s.github.io/stdotp/" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-emerald-400 flex items-center gap-1 font-semibold transition-colors">
+                  <span>Open Full Browser Demo</span>
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Widget 2: Anchor Merkle Tree Tamper Detector -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-purple-500/30 relative">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <svg class="w-5 h-5 fill-none stroke-current text-purple-400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>
+                <h3 class="font-bold text-white text-lg">Anchor Merkle Integrity Detector</h3>
+              </div>
+              <div id="merkle-status-badge">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Verified Provenance
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-6 space-y-4">
+              
+              <!-- Merkle Tree Visualizer Diagram -->
+              <div class="p-4 rounded-xl bg-slate-950/90 border border-purple-500/20 text-center font-mono">
+                
+                <!-- Root -->
+                <div class="mb-3">
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">Signed Merkle Root (Ed25519)</div>
+                  <div id="merkle-root-hash" class="inline-block px-4 py-1.5 rounded-lg bg-purple-500/15 border border-purple-500/40 text-purple-300 font-bold text-xs sm:text-sm">
+                    0x8a92...e3b0
+                  </div>
+                </div>
+
+                <!-- Parents -->
+                <div class="grid grid-cols-2 gap-3 my-2">
+                  <div class="p-2 rounded bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
+                    H(Chunk 0 + 1): <span id="merkle-parent-0" class="text-sky-300 font-bold">...</span>
+                  </div>
+                  <div class="p-2 rounded bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
+                    H(Chunk 2 + 3): <span id="merkle-parent-1" class="text-sky-300 font-bold">...</span>
+                  </div>
+                </div>
+
+                <!-- Leaves -->
+                <div class="grid grid-cols-4 gap-2 pt-2 border-t border-slate-800/80">
+                  <div class="p-1.5 rounded bg-slate-800/80 border border-sky-500/30 text-[10px]">
+                    <div class="text-slate-400">Frame 0</div>
+                    <div id="merkle-leaf-0" class="merkle-leaf font-bold text-sky-300 truncate">4a8c9b2e</div>
+                  </div>
+                  <div class="p-1.5 rounded bg-slate-800/80 border border-sky-500/30 text-[10px]">
+                    <div class="text-slate-400">Frame 1</div>
+                    <div id="merkle-leaf-1" class="merkle-leaf font-bold text-sky-300 truncate">7f1d0a5c</div>
+                  </div>
+                  <div class="p-1.5 rounded bg-slate-800/80 border border-sky-500/30 text-[10px]">
+                    <div class="text-slate-400">Frame 2</div>
+                    <div id="merkle-leaf-2" class="merkle-leaf font-bold text-sky-300 truncate">3b6e8a1f</div>
+                  </div>
+                  <div class="p-1.5 rounded bg-slate-800/80 border border-sky-500/30 text-[10px]">
+                    <div class="text-slate-400">Frame 3</div>
+                    <div id="merkle-leaf-3" class="merkle-leaf font-bold text-sky-300 truncate">9d2c4e6a</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="flex items-center justify-between gap-3 pt-2">
+                <button id="merkle-tamper-btn" class="px-3.5 py-2 rounded-lg text-xs font-mono font-semibold bg-rose-500/20 text-rose-300 hover:bg-rose-500/30 border border-rose-500/40 transition-all flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                  <span>Simulate Video Tamper (Modify Frame 1)</span>
+                </button>
+                <button id="merkle-reset-btn" class="px-3.5 py-2 rounded-lg text-xs font-mono font-semibold bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition-all">
+                  Reset Clean
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- SELECTED TECHNICAL NOTES & RFCS           -->
+    <!-- ========================================== -->
+    <section id="notes" class="py-10 sm:py-14 section-alt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-2 font-bold">// Engineering RFCs & Thought Leadership</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Selected Technical Notes</h2>
+          <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
+            Concise engineering breakdowns on supply chain reduction, verifiable provenance, and forensic integrity.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- RFC 1 -->
+          <div class="glass-panel p-6 rounded-2xl border border-sky-500/25 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                <span class="text-sky-400 font-bold">RFC-01</span>
+                <span>Zero-Dependency Go</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Defensible Standard-Library Architecture</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Why removing external packages eliminates supply-chain attack vectors (e.g. malicious dependency takeovers) while enabling deterministic, byte-for-byte reproducible air-gapped binaries.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-xs font-mono text-sky-400 flex items-center justify-between">
+              <span>Read in stdotp README</span>
+              <a href="https://github.com/moin08s/stdotp#readme" target="_blank" rel="noopener noreferrer" class="hover:underline">Explore →</a>
+            </div>
+          </div>
+
+          <!-- RFC 2: Research Publication (IJARSCT) -->
+          <div class="glass-panel p-6 rounded-2xl border border-purple-500/25 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                <span class="text-purple-400 font-bold">RESEARCH-01</span>
+                <span>IJARSCT Journal (April 2024)</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Employee Management System (HR SPHERE)</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Peer-reviewed research paper detailing the V-Model engineering methodology, normalized relational database design, and C#.NET enterprise desktop architecture for automated payroll and attendance tracking.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-xs font-mono text-purple-400 flex items-center justify-between">
+              <span>Read Publication Notes</span>
+              <a href="https://github.com/moin08s/HR_SPHERE#readme" target="_blank" rel="noopener noreferrer" class="hover:underline">Explore →</a>
+            </div>
+          </div>
+
+          <!-- RFC 3 -->
+          <div class="glass-panel p-6 rounded-2xl border border-emerald-500/25 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                <span class="text-emerald-400 font-bold">RFC-03</span>
+                <span>DFIR Super-Timelines</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Automated Cross-Artifact Attack Correlation</h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Algorithmic normalization of disparate timestamp sources (Windows EVTX, MFT $SI/$FN, prefetch, shellbags, Linux audit) to reconstruct chronological adversary kill-chains.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-xs font-mono text-emerald-400 flex items-center justify-between">
+              <span>Read in WASP README</span>
+              <a href="https://github.com/moin08s/WASP#readme" target="_blank" rel="noopener noreferrer" class="hover:underline">Explore →</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- TECHNICAL SKILLS & ARCHITECTURAL PRINCIPLES -->
+    <!-- ========================================== -->
+    <section id="skills" class="py-10 sm:py-14 section-lift">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16">
+          <div class="text-xs font-mono text-sky-400 uppercase tracking-wider mb-2 font-bold">// Technical Capabilities</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Full-Stack & Systems Competency</h2>
+          <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
+            Engineering software with high standards of security, determinism, and performance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Skill Col 1: Desktop & Enterprise Systems -->
+          <div class="glass-panel p-6 rounded-2xl border border-sky-500/25 space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400">
+              <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white">Desktop & Enterprise</h3>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Full-lifecycle desktop software engineering, formal V-Model SDLC, normalized RDBMS schemas, and role-based privilege isolation.
+            </p>
+            <div class="space-y-2 pt-2 text-xs font-mono">
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">C#.NET (Visual Studio 2022)</span>
+                <span class="text-sky-400 font-bold">Enterprise UI</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">MS SQL Server 2022</span>
+                <span class="text-emerald-400 font-bold">Relational RDBMS</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">Java (Swing) / JDK 8+</span>
+                <span class="text-purple-400 font-bold">3-Tier DAO</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">Software Engineering (V-Model)</span>
+                <span class="text-amber-400 font-bold">Formal SDLC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Col 2: Systems, Languages & DSA -->
+          <div class="glass-panel p-6 rounded-2xl border border-purple-500/25 space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+              <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white">Systems, Languages & DSA</h3>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Standard-library zero-dependency engineering, fundamental data structures in C, and cryptographic integrity.
+            </p>
+            <div class="space-y-2 pt-2 text-xs font-mono">
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">Go (1.27 Pure Stdlib)</span>
+                <span class="text-sky-400 font-bold">Zero-Dependency</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">C (Stack & Queue DSA)</span>
+                <span class="text-emerald-400 font-bold">Core Algorithms</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">Python 3.11+ / Pytest</span>
+                <span class="text-purple-400 font-bold">Automated CI</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">AES-256-GCM & SHA-256</span>
+                <span class="text-amber-400 font-bold">RFC 6238/4226</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Col 3: AI/ML, Geospatial & Full-Stack -->
+          <div class="glass-panel p-6 rounded-2xl border border-emerald-500/25 space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white">AI/ML, Geospatial & Web</h3>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              National remote sensing geodata processing, autonomous agent protocols, and modern full-stack JavaScript.
+            </p>
+            <div class="space-y-2 pt-2 text-xs font-mono">
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">Geodata Processing (ISRO IIRS)</span>
+                <span class="text-sky-400 font-bold">Satellite ML</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">Model Context Protocol (MCP)</span>
+                <span class="text-emerald-400 font-bold">Sonar AI / MoES</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">JavaScript / Node.js / Vite</span>
+                <span class="text-purple-400 font-bold">Full-Stack</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-200">SQLite & Concurrency Locks</span>
+                <span class="text-amber-400 font-bold">Embedded DB</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- ABOUT & PHILOSOPHY                         -->
+    <!-- ========================================== -->
+    <section id="about" class="py-10 sm:py-14 section-alt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="text-xs font-mono text-sky-400 uppercase tracking-wider font-bold">// Engineering Philosophy</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Why Zero-Dependency & Cryptographic Defensibility?</h2>
+            
+            <p class="text-slate-200 leading-relaxed text-sm sm:text-base">
+              In an era of bloated dependency trees and software supply chain vulnerabilities, I advocate for <strong>defensible engineering</strong>: software with predictable memory footprints, zero unvetted runtime dependencies, and cryptographic algorithms strictly adhering to established standards (RFC 4226, RFC 6238, RFC 2898).
+            </p>
+
+            <div class="space-y-3 font-mono text-xs text-slate-200">
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-3">
+                <svg class="w-4 h-4 fill-none stroke-current text-sky-400 mt-0.5 shrink-0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <div>
+                  <strong class="text-white">Never Roll Your Own Cipher:</strong> Strict composition of battle-tested primitives (<code class="text-sky-300">crypto/aes</code>, <code class="text-sky-300">crypto/cipher</code>, <code class="text-sky-300">crypto/hmac</code>).
+                </div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-3">
+                <svg class="w-4 h-4 fill-none stroke-current text-emerald-400 mt-0.5 shrink-0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <div>
+                  <strong class="text-white">Zero-Allocation Inner Loops:</strong> Memory slice recycling and constant-time verification preventing timing side-channel attacks.
+                </div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-3">
+                <svg class="w-4 h-4 fill-none stroke-current text-purple-400 mt-0.5 shrink-0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg>
+                <div>
+                  <strong class="text-white">Atomic State & Durability:</strong> Strict lockfile concurrency, temporary staging, and synchronous directory fsync.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-sky-500/25 space-y-6">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                <span class="text-xs font-mono text-slate-400">// Professional Profile</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-sky-500/10 text-sky-400 font-bold">moin08s</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+                <div class="relative group flex-shrink-0">
+                  <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-sky-400 via-teal-300 to-emerald-400 p-[2px] shadow-xl shadow-sky-500/30 overflow-hidden">
+                    <img 
+                      src="assets/profile.jpg" 
+                      onerror="this.onerror=null; this.src='profile.jpg';" 
+                      alt="Moin Mulla" 
+                      width="112" 
+                      height="112" 
+                      loading="lazy" 
+                      decoding="async" 
+                      class="w-full h-full object-cover rounded-[14px] group-hover:scale-105 transition-transform duration-300" 
+                    />
+                  </div>
+                  <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-md bg-slate-900 border border-emerald-500/50 text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1 shadow-lg">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Verified
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-white">Moin Sajit Mulla</h3>
+                  <p class="text-xs font-mono text-sky-400 mt-0.5 font-semibold">Systems & Cryptographic Software Engineer</p>
+                  <div class="flex flex-wrap items-center gap-2 mt-3 text-xs font-mono">
+                    <a href="https://github.com/moin08s" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 flex items-center gap-1.5 transition-all">
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                      <span>github/moin08s</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/moin-mulla-4ba680218/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 flex items-center gap-1.5 transition-all">
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                      <span>LinkedIn</span>
+                    </a>
+                    <a href="assets/resume.html" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/35 flex items-center gap-1.5 transition-all">
+                      <span>📄 Résumé</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 font-mono text-xs space-y-2 text-slate-200">
+                <div><span class="text-slate-400">Core Focus:</span> Systems Software, Backend Cryptography, Multimodal AI & Forensics</div>
+                <div><span class="text-slate-400">Hackathons:</span> 🥉 3rd Prize Aarambh '26 (WCE Sangli) · stdotp (Zero Dep '26) · SIH26057 MoES</div>
+                <div><span class="text-slate-400">Open Source:</span> 12 Public Repositories (github.com/moin08s)</div>
+                <div><span class="text-slate-400">Location:</span> Sangli / Islampur, Maharashtra, India</div>
+                <div><span class="text-slate-400">Availability:</span> Full-Time Roles & High-Impact Systems Collaborations</div>
+              </div>
+
+              <div class="flex items-center gap-3 pt-2">
+                <a href="#contact" class="flex-grow text-center py-2.5 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 font-mono text-xs font-bold border border-sky-500/30 transition-all">
+                  Initiate Discussion
+                </a>
+                <a href="https://www.linkedin.com/in/moin-mulla-4ba680218/" target="_blank" rel="noopener noreferrer" class="text-center px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs font-semibold border border-slate-700 transition-all">
+                  Book a Discussion (LinkedIn)
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- CONTACT & CONNECT                          -->
+    <!-- ========================================== -->
+    <section id="contact" class="py-10 sm:py-14 section-lift">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="text-xs font-mono text-sky-400 uppercase tracking-wider font-bold">// Get In Touch</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Build Resilient Systems Together</h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Whether you are looking for a systems engineer to build high-assurance backend services, zero-dependency tools, or secure cryptographic pipelines, feel free to reach out.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              
+              <!-- LinkedIn Card -->
+              <a href="https://www.linkedin.com/in/moin-mulla-4ba680218/" target="_blank" rel="noopener noreferrer" class="glass-panel p-4 rounded-xl border border-sky-500/25 flex items-center gap-4 hover:border-sky-500/50 hover:bg-sky-500/10 transition-all group">
+                <div class="w-11 h-11 rounded-xl bg-[#0077B5]/15 text-[#0077B5] border border-[#0077B5]/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#0077B5]/25 transition-all shadow-lg shadow-[#0077B5]/10 flex-shrink-0">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-slate-400">Connect on LinkedIn</div>
+                  <div class="text-sm font-bold text-white group-hover:text-sky-400 transition-colors">moin-mulla-4ba680218</div>
+                </div>
+              </a>
+
+              <!-- GitHub Card -->
+              <a href="https://github.com/moin08s" target="_blank" rel="noopener noreferrer" class="glass-panel p-4 rounded-xl border border-sky-500/25 flex items-center gap-4 hover:border-sky-500/50 hover:bg-emerald-500/10 transition-all group">
+                <div class="w-11 h-11 rounded-xl bg-slate-800 text-slate-100 border border-slate-700 flex items-center justify-center group-hover:scale-110 group-hover:border-emerald-500/40 group-hover:text-emerald-400 transition-all shadow-lg shadow-black/30 flex-shrink-0">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-slate-400">Explore Open Source on GitHub</div>
+                  <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">github.com/moin08s</div>
+                </div>
+              </a>
+
+              <!-- Live Demo Card -->
+              <a href="https://moin08s.github.io/stdotp/" target="_blank" rel="noopener noreferrer" class="glass-panel p-4 rounded-xl border border-sky-500/25 flex items-center gap-4 hover:border-sky-500/50 hover:bg-purple-500/10 transition-all group">
+                <div class="w-11 h-11 rounded-xl bg-purple-500/15 text-purple-400 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-purple-500/25 transition-all shadow-lg shadow-purple-500/10 flex-shrink-0">
+                  <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-slate-400">Interactive Browser Project</div>
+                  <div class="text-sm font-bold text-white group-hover:text-purple-400 transition-colors">moin08s.github.io/stdotp</div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Contact Form (Mailto Integrated + Stored Backup) -->
+          <div class="lg:col-span-7">
+            <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-sky-500/30 relative">
+              <h3 class="text-xl font-bold text-white mb-2">Transmit Direct Inquiry</h3>
+              <p class="text-xs font-mono text-slate-400 mb-6">Submitting opens your default email client prefilled with your message and securely records your inquiry.</p>
+
+              <form id="portfolio-contact-form" class="space-y-4">
+                <div>
+                  <label for="contact-name" class="block text-xs font-mono text-slate-300 mb-1">Your Name / Organization *</label>
+                  <input type="text" id="contact-name" required placeholder="Alex Turner / Acme Systems" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-sky-400" />
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block text-xs font-mono text-slate-300 mb-1">Your Email Address *</label>
+                  <input type="email" id="contact-email" required placeholder="alex@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-sky-400" />
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-mono text-slate-300 mb-1">Transmission Details / Role Inquiry *</label>
+                  <textarea id="contact-message" rows="4" required placeholder="Hi Moin, we would like to discuss a systems software / backend engineering role..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-sky-400"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                  <button type="submit" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-teal-500 text-slate-950 font-bold font-mono text-xs hover:brightness-110 shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <span>Transmit Message</span>
+                  </button>
+                  <span class="text-[11px] font-mono text-slate-400">Response turnaround: ~24 hours</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="py-10 border-t border-slate-800 bg-[#080c14] text-slate-400 text-xs font-mono">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2.5">
+            <span class="text-sky-400 font-bold text-sm">Moin Sajit Mulla</span>
+            <span class="text-slate-600">|</span>
+            <span>© 2026. Zero-Dependency & High Assurance.</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-slate-300">
+            <a href="https://github.com/moin08s" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub (@moin08s)</a>
+            <a href="https://www.linkedin.com/in/moin-mulla-4ba680218/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">LinkedIn</a>
+            <a href="assets/resume.html" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Résumé (PDF)</a>
+            <a href="https://moin08s.github.io/stdotp/" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">Live Demo</a>
+            <a href="#hero" class="text-sky-400 hover:text-sky-300 font-semibold transition-colors">↑ Top</a>
+          </div>
+        </div>
+        <div class="text-[11px] text-slate-500 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-900">
+          <div>Last Updated: October 2026 · Pure Vanilla ES6 & TailwindCSS · No external JS frameworks</div>
+          <div>Verified Zero-CVE Clean Static Architecture</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- PROJECT DETAIL MODAL DIALOG                -->
+  <!-- ========================================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+    <div class="glass-panel w-full max-w-3xl rounded-2xl border border-sky-500/40 p-6 sm:p-8 max-h-[90vh] overflow-y-auto bg-[#0d121f] shadow-2xl relative">
+      
+      <!-- Modal Close Button -->
+      <button id="modal-close-btn" class="absolute top-5 right-5 p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all" aria-label="Close dialog">
+        <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="flex items-center gap-2 mb-2">
+        <span id="modal-badge" class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-sky-500/10 text-sky-400 border border-sky-500/30 font-bold">Category</span>
+      </div>
+
+      <h3 id="modal-title" class="text-2xl font-bold text-white">Project Title</h3>
+      <p id="modal-tagline" class="text-xs font-mono text-slate-400 mt-1">Project Tagline</p>
+
+      <!-- Recruiter Impact Box -->
+      <div id="modal-impact" class="mt-4"></div>
+
+      <!-- Quantified Metrics Grid -->
+      <div class="mt-4">
+        <h4 class="text-xs font-mono uppercase text-slate-400 tracking-wider mb-2">// Quantified Benchmark & Architecture Metrics</h4>
+        <div id="modal-metrics" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+      </div>
+
+      <p id="modal-desc" class="text-sm text-slate-200 mt-5 leading-relaxed"></p>
+
+      <!-- Architecture Diagram Container -->
+      <div id="modal-diagram"></div>
+
+      <div class="mt-6">
+        <h4 class="text-xs font-mono uppercase text-sky-400 tracking-wider mb-2 font-bold">// Architectural Specifications & Deliverables</h4>
+        <ul id="modal-highlights" class="space-y-2 text-xs font-mono text-slate-200"></ul>
+      </div>
+
+      <div class="mt-6">
+        <h4 class="text-xs font-mono uppercase text-slate-400 tracking-wider mb-2">// Technologies & Standards</h4>
+        <div id="modal-stack" class="flex flex-wrap gap-1.5"></div>
+      </div>
+
+      <div class="flex items-center gap-4 mt-8 pt-6 border-t border-slate-800">
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-mono font-semibold flex items-center gap-2 border border-slate-700 transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span>View Source Repository</span>
+        </a>
+        <a id="modal-demo-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-teal-500 text-slate-950 font-bold text-xs font-mono flex items-center gap-2 shadow-lg shadow-sky-500/20 transition-all">
+          <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>Open Live Demo</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Toast Notification Container -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 max-w-sm glass-panel p-4 rounded-xl border border-sky-500/50 shadow-2xl flex items-start gap-3 bg-[#0d121f]/95">
+    <svg class="w-4 h-4 fill-none stroke-current text-sky-400 mt-0.5 shrink-0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+    <div id="toast-message" class="text-xs font-mono leading-relaxed text-slate-100">Notification message.</div>
+  </div>
+
+
+  <!-- Application Scripts -->
+  <script src="js/terminal.js?v=2.9.0"></script>
+  <script src="js/crypto-demo.js?v=2.9.0"></script>
+  <script src="js/app.js?v=2.9.0"></script>
+</body>
+</html>
